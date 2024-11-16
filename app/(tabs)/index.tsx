@@ -18,10 +18,11 @@ export default function HomeScreen() {
         }
       >
         <StatusBar style="auto" />
+
         <Switch
           style={{
             display: "flex",
-            justifyContent: "flex-start",
+            justifyContent: "space-between",
             alignContent: "flex-start",
             alignSelf: "flex-start",
           }}
