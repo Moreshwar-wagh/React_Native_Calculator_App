@@ -1,9 +1,10 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Switch, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, Switch } from "react-native";
 import { ThemeContext } from "@/src/context/ThemeContext";
 import { useState } from "react";
 import { myColors } from "@/src/styles/Colors";
 import MyKeyboard from "@/src/components/MyKeyboard";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   const [theme, setTheme] = useState("light");
@@ -18,6 +19,12 @@ export default function HomeScreen() {
       >
         <StatusBar style="auto" />
         <Switch
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignContent: "flex-start",
+            alignSelf: "flex-start",
+          }}
           value={theme === "light"}
           onValueChange={() => setTheme(theme === "light" ? "dark" : "light")}
         />
