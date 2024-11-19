@@ -19,6 +19,7 @@ export default function HomeScreen() {
       >
         <StatusBar style="auto" />
 
+        {/* Add icons here for dark mode button */}
         <Switch
           style={{
             display: "flex",
